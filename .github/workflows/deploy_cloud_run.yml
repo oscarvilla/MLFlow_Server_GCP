@@ -16,7 +16,7 @@ jobs:
       PROJECT_ID: mlflow-infra
       REPOSITORY: mlflow-artifacs
       SERVICE_ACCOUNT: mlflow-user@mlflow-infra.iam.gserviceaccount.com
-      SERVICE_NAME: MLflow's Cloud Run
+      SERVICE_NAME: MLflow Cloud Run
 
     steps:
     - name: Checkout
