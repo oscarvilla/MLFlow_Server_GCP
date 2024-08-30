@@ -13,7 +13,7 @@ from sklearn.linear_model import ElasticNet
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # Define the tracking URI for the MLflow experiment
-TRACKING_URI = "YOUR-URI-FROM-CLOUD-RUN"
+TRACKING_URI = "https://mlflow-cloud-run-x3254lb47a-uc.a.run.app"
 
 # Read the wine-quality dataset from a CSV file
 csv_url = "https://raw.githubusercontent.com/mlflow/mlflow/master/tests/datasets/winequality-red.csv"
@@ -29,10 +29,10 @@ train_y = train[["quality"]]
 test_y = test[["quality"]]
 
 # Define hyperparameters for the Elastic Net model
-alpha = 0.5
-l1_ratio = 0.5
+alpha = 0.1
+l1_ratio = 0.1
 random_state = 42
-max_iter = 1000
+max_iter = 2000
 
 # Create an Elastic Net model with the defined hyperparameters
 lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=random_state, max_iter=max_iter)
