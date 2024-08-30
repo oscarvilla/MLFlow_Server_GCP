@@ -1,0 +1,13 @@
+service: mlflow-tracking-server
+runtime: python310
+env: standard
+# entrypoint: gunicorn main:app -w 1 -k uvicorn.workers.UvicornWorker
+entrypoint: gunicorn -b :$PORT main:app
+instance_class: F1
+
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS: "/home/datascientistoscar/sa-private-key.json"
+
+# handlers:
+# - url: /.*
+#   script: auto
